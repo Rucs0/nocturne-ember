@@ -4,7 +4,9 @@
 
 export const site = {
   name: "Ember",
-  url: "https://example.com", // used for metadata, sitemap, and OG tags
+  // Used for metadata, sitemap, and OG tags. Set NEXT_PUBLIC_SITE_URL in your
+  // host's env to override it without editing this file.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
   tagline: "Know before your users do",
   description:
     "Ember watches every endpoint, region, and dependency you ship — then tells you what broke, where, and who it touches before the first support ticket lands.",
