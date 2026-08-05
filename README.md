@@ -2,7 +2,16 @@
 
 A free single-page starter from [Nocturne](https://nocturneui.com/?utm_source=ember&utm_medium=readme&utm_campaign=free-starter) — dark-first, animation-heavy, and production-shaped rather than demo-shaped.
 
+![Ember in motion](docs/demo.gif)
+
 It ships the same design-system machinery and motion primitives as the paid Nocturne templates, cut down to one page so you can read the whole thing in an afternoon.
+
+MIT licensed — use it for anything, no attribution required.
+
+```bash
+git clone https://github.com/Rucs0/nocturne-ember.git
+cd nocturne-ember && npm install && npm run dev
+```
 
 ## What's in it
 
