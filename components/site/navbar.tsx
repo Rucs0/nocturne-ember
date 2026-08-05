@@ -24,11 +24,16 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50">
       <div
         className={cn(
-          "mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 transition-all duration-300 sm:px-6",
+          // 3-column grid rather than justify-between: the actions group is
+          // wider than the logo, so space-between left the nav sitting left of
+          // true centre. Equal 1fr side tracks centre it whatever flanks it.
+          "mx-auto grid h-16 max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 transition-all duration-300 sm:px-6",
           scrolled && "mt-3 h-14 max-w-4xl rounded-2xl glass px-4 shadow-lg shadow-black/5",
         )}
       >
-        <Logo />
+        <div className="justify-self-start">
+          <Logo />
+        </div>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Main">
           {site.nav.map((item) => (
@@ -42,7 +47,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1.5 justify-self-end">
           <ThemeToggle />
           <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
             <Link href={site.cta.secondary.href}>{site.cta.secondary.label}</Link>

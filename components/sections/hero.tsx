@@ -48,7 +48,11 @@ export function Hero() {
               // box — a trailing space inside an inline-block gets trimmed,
               // and the words render jammed together.
               <Fragment key={i}>
-                <span className="inline-block overflow-hidden pb-1 align-bottom">
+                {/* pr/-mr pair: the italic words lean past the content edge and
+                    overflow-hidden clips the final glyph. The padding gives the
+                    lean room inside the box; the equal negative margin keeps the
+                    word spacing exactly where it was. */}
+                <span className="inline-block overflow-hidden pb-1 pr-[0.12em] -mr-[0.12em] align-bottom">
                   <motion.span
                     className={
                       i >= 3
