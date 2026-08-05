@@ -52,11 +52,17 @@ export function Hero() {
                     overflow-hidden clips the final glyph. The padding gives the
                     lean room inside the box; the equal negative margin keeps the
                     word spacing exactly where it was. */}
-                <span className="inline-block overflow-hidden pb-1 pr-[0.12em] -mr-[0.12em] align-bottom">
+                <span className="inline-block overflow-hidden pb-1 pr-[0.18em] -mr-[0.18em] align-bottom">
                   <motion.span
                     className={
                       i >= 3
-                        ? "font-display text-gradient-brand inline-block italic"
+                        ? // text-gradient-brand paints via background-clip:text, so a
+                          // glyph is drawn only where the BACKGROUND box reaches. The
+                          // italic lean overhangs that box and the overhang is never
+                          // painted — the last "s" in "users" looked sliced off.
+                          // Padding widens the paint area; the equal negative margin
+                          // keeps the word spacing identical.
+                          "font-display text-gradient-brand inline-block italic pr-[0.14em] -mr-[0.14em]"
                         : "inline-block"
                     }
                     initial={{ y: "100%", opacity: 0 }}
