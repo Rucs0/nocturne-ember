@@ -1,0 +1,6 @@
+# Keep the marketing GIF out of the distributed zip. It is ~4.6 MB against
+# ~120 KB of actual template, so shipping it made the download 40x heavier for
+# no benefit to whoever downloaded it. The README points at the GitHub-hosted
+# copy, so the image still renders both on GitHub and in the zip's README.
+docs/ export-ignore
+.gitattributes export-ignore

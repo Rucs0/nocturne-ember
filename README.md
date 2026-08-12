@@ -4,7 +4,7 @@ A free single-page starter from [Nocturne](https://nocturneui.com/?utm_source=em
 
 **[▶ Live demo — ember.nocturneui.com](https://ember.nocturneui.com)**
 
-![Ember in motion](docs/demo.gif)
+![Ember in motion](https://raw.githubusercontent.com/Rucs0/nocturne-ember/main/docs/demo.gif)
 
 It ships the same design-system machinery and motion primitives as the paid Nocturne templates, cut down to one page so you can read the whole thing in an afternoon.
 
