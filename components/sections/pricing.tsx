@@ -84,7 +84,7 @@ export function Pricing() {
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{tier.blurb}</p>
 
-                <ul className="mt-6 space-y-3 text-sm">
+                <ul className="mt-6 flex-1 space-y-3 text-sm">
                   {tier.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5">
                       <Check className="mt-0.5 size-4 shrink-0 text-brand" aria-hidden />
