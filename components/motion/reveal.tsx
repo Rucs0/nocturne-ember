@@ -5,7 +5,11 @@ import { cn } from "@/lib/utils";
 
 const EASE = [0.21, 0.47, 0.32, 0.98] as const;
 
-/** Scroll-triggered entrance: rise, fade, and unblur. */
+/* No `filter: blur()` in these variants: unlike transform/opacity, blur
+   can't be compositor-accelerated, so animating it forces a full repaint
+   every frame and drops scroll framerate on lower-end hardware. */
+
+/** Scroll-triggered entrance: rise and fade. */
 export function Reveal({
   children,
   className,
@@ -22,8 +26,8 @@ export function Reveal({
   return (
     <motion.div
       className={cn(className)}
-      initial={{ opacity: 0, y, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      initial={{ opacity: 0, y }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once, margin: "-64px" }}
       transition={{ duration: 0.7, delay, ease: EASE }}
     >
@@ -75,11 +79,10 @@ export function StaggerItem({
     <motion.div
       className={cn(className)}
       variants={{
-        hidden: { opacity: 0, y, filter: "blur(8px)" },
+        hidden: { opacity: 0, y },
         show: {
           opacity: 1,
           y: 0,
-          filter: "blur(0px)",
           transition: { duration: 0.65, ease: EASE },
         },
       }}

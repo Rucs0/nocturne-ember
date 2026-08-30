@@ -20,7 +20,7 @@ export function Cta() {
             />
             <h2 className="font-display mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
               Find out about the next one{" "}
-              <span className="text-gradient-brand italic">before your customers do.</span>
+              <span className="text-brand">before your customers do.</span>
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-pretty text-muted-foreground">
               Three monitors free, forever. It takes about ninety seconds to point

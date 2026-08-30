@@ -59,9 +59,8 @@ export function Pricing() {
     <section id="pricing" className="py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Pricing"
           title="Priced per monitor, not per engineer"
-          sub="Adding a teammate never costs more. Every plan includes the full alerting stack — the tiers differ in scale, not in whether you get woken up correctly."
+          sub="Adding a teammate never costs more. Every plan includes the full alerting stack: the tiers differ in scale, not in whether you get woken up correctly."
         />
 
         <Stagger className="mt-14 grid gap-6 lg:grid-cols-3" gap={0.1}>

@@ -29,8 +29,8 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <motion.div
-            initial={{ opacity: 0, y: 16, filter: "blur(6px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: EASE }}
           >
             <span className="glass inline-flex items-center gap-2 rounded-full py-1.5 pr-4 pl-1.5 text-sm text-muted-foreground">
@@ -45,26 +45,12 @@ export function Hero() {
           <h1 className="mt-7 text-5xl leading-[1.05] font-semibold tracking-tighter text-balance sm:text-6xl md:text-7xl">
             {headline.map((word, i) => (
               // The inter-word space must sit OUTSIDE the overflow-hidden
-              // box — a trailing space inside an inline-block gets trimmed,
+              // box: a trailing space inside an inline-block gets trimmed,
               // and the words render jammed together.
               <Fragment key={i}>
-                {/* pr/-mr pair: the italic words lean past the content edge and
-                    overflow-hidden clips the final glyph. The padding gives the
-                    lean room inside the box; the equal negative margin keeps the
-                    word spacing exactly where it was. */}
-                <span className="inline-block overflow-hidden pb-1 pr-[0.18em] -mr-[0.18em] align-bottom">
+                <span className="inline-block overflow-hidden pb-1 align-bottom">
                   <motion.span
-                    className={
-                      i >= 3
-                        ? // text-gradient-brand paints via background-clip:text, so a
-                          // glyph is drawn only where the BACKGROUND box reaches. The
-                          // italic lean overhangs that box and the overhang is never
-                          // painted — the last "s" in "users" looked sliced off.
-                          // Padding widens the paint area; the equal negative margin
-                          // keeps the word spacing identical.
-                          "font-display text-gradient-brand inline-block italic pr-[0.14em] -mr-[0.14em]"
-                        : "inline-block"
-                    }
+                    className={i >= 3 ? "font-display text-brand inline-block" : "inline-block"}
                     initial={{ y: "100%", opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.7, delay: 0.1 + i * 0.07, ease: EASE }}
@@ -120,8 +106,8 @@ export function Hero() {
 
         <motion.div
           className="mx-auto mt-16 max-w-4xl"
-          initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.5, ease: EASE }}
         >
           <StatusBoard />

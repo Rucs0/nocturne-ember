@@ -12,7 +12,7 @@ const FEATURES = [
   {
     icon: Bell,
     title: "Alerts that respect sleep",
-    body: "Escalation policies, quiet hours, and dependency-aware grouping. One outage pages one person — not the entire on-call rotation.",
+    body: "Escalation policies, quiet hours, and dependency-aware grouping. One outage pages one person, not the entire on-call rotation.",
   },
   {
     icon: GitBranch,
@@ -31,7 +31,6 @@ export function Features() {
     <section id="features" className="py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Features"
           title="Everything you need to catch it early"
           sub="Monitoring is only useful if it reaches the right person with enough context to act. Ember is built around that last mile."
         />

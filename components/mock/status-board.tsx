@@ -134,8 +134,7 @@ export function StatusBoard() {
       {/* Incident callout */}
       <div className="border-t bg-amber-500/8 px-4 py-3 sm:px-5">
         <p className="text-sm">
-          <span className="font-medium text-amber-500">Investigating</span>
-          {" — "}
+          <span className="font-medium text-amber-500">Investigating:</span>{" "}
           elevated latency on checkout-service (eu-west-2). Detected
           <span className="font-medium text-foreground"> 40s </span>
           before the first user report.

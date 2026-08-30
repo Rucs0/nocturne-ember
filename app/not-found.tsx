@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <div className="relative flex min-h-[70vh] flex-col items-center justify-center px-4 pt-24 text-center">
       <div aria-hidden className="bg-grid absolute inset-0 -z-10" />
-      <p className="text-gradient-brand font-display text-8xl font-semibold tracking-tight sm:text-9xl">
+      <p className="font-display text-8xl font-semibold tracking-tight text-muted-foreground/50 sm:text-9xl">
         404
       </p>
       <h1 className="mt-4 font-display text-2xl font-semibold tracking-tight">

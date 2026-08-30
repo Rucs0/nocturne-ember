@@ -14,7 +14,7 @@ const FAQS = [
   },
   {
     q: "Do you charge per seat?",
-    a: "No. Pricing is per monitor and per check interval. Invite your whole team, your contractors, and the founder who likes dashboards — the bill doesn't move.",
+    a: "No. Pricing is per monitor and per check interval. Invite your whole team, your contractors, and the founder who likes dashboards, the bill doesn't move.",
   },
   {
     q: "Can I monitor things behind a VPN?",
@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: "What happens when Ember itself goes down?",
-    a: "Alerting runs from a separate cluster to the dashboard, and heartbeat monitors fail open — if we can't reach you, you get notified through your backup channel. Our own status page runs on a different provider on purpose.",
+    a: "Alerting runs from a separate cluster to the dashboard, and heartbeat monitors fail open: if we can't reach you, you get notified through your backup channel. Our own status page runs on a different provider on purpose.",
   },
   {
     q: "Is there a free plan or just a trial?",
@@ -35,9 +35,8 @@ export function Faq() {
     <section id="faq" className="py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="FAQ"
           title="The questions we actually get asked"
-          sub="If yours isn't here, the answer is probably yes — ask us."
+          sub="If yours isn't here, the answer is probably yes, ask us."
         />
 
         <Reveal delay={0.1} className="mt-12">

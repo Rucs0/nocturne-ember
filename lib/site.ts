@@ -9,7 +9,7 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
   tagline: "Know before your users do",
   description:
-    "Ember watches every endpoint, region, and dependency you ship — then tells you what broke, where, and who it touches before the first support ticket lands.",
+    "Ember watches every endpoint, region, and dependency you ship, then tells you what broke, where, and who it touches before the first support ticket lands.",
   nav: [
     { href: "#features", label: "Features" },
     { href: "#pricing", label: "Pricing" },
