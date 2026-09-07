@@ -11,8 +11,8 @@ const columns = [
 export function Footer() {
   return (
     <footer className="border-t">
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
+        <div className="grid gap-8 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-10">
           <div className="space-y-4">
             <Logo />
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -37,7 +37,7 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
+        <div className="mt-8 flex flex-col items-start justify-between gap-3 border-t pt-6 text-xs text-muted-foreground sm:mt-12 sm:flex-row sm:items-center">
           <p>
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>

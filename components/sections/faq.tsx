@@ -32,7 +32,7 @@ const FAQS = [
 
 export function Faq() {
   return (
-    <section id="faq" className="py-24">
+    <section id="faq" className="py-16 sm:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <SectionHeading
           title="The questions we actually get asked"
