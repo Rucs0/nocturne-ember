@@ -208,7 +208,8 @@
     mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
   }
 
-  .pause-on-hover:hover * {
+  .pause-on-hover:hover *,
+  .pause-on-hover:focus-within * {
     animation-play-state: paused;
   }
 }

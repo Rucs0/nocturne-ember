@@ -73,7 +73,7 @@ export function Pricing() {
                 )}
               >
                 {tier.featured && (
-                  <span className="mb-4 self-start rounded-full bg-brand/15 px-3 py-1 text-xs font-medium text-brand">
+                  <span className="mb-4 self-start rounded-full bg-brand px-3 py-1 text-xs font-medium text-primary-foreground">
                     Most popular
                   </span>
                 )}

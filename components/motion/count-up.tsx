@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { animate, useInView } from "motion/react";
+import { animate, useInView, useReducedMotion } from "motion/react";
 
 /** Animates a number from 0 when scrolled into view. */
 export function CountUp({
@@ -21,22 +21,29 @@ export function CountUp({
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
+  const reduce = useReducedMotion();
 
   useEffect(() => {
     if (!inView || !ref.current) return;
     const node = ref.current;
+    const format = (v: number) =>
+      `${prefix}${v.toLocaleString("en-US", {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals,
+      })}${suffix}`;
+    if (reduce) {
+      node.textContent = format(value);
+      return;
+    }
     const controls = animate(0, value, {
       duration,
       ease: [0.16, 1, 0.3, 1],
       onUpdate: (v) => {
-        node.textContent = `${prefix}${v.toLocaleString("en-US", {
-          minimumFractionDigits: decimals,
-          maximumFractionDigits: decimals,
-        })}${suffix}`;
+        node.textContent = format(v);
       },
     });
     return () => controls.stop();
-  }, [inView, value, prefix, suffix, decimals, duration]);
+  }, [inView, reduce, value, prefix, suffix, decimals, duration]);
 
   return (
     <span ref={ref} className={className}>

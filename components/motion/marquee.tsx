@@ -14,7 +14,12 @@ export function Marquee({
   reverse?: boolean;
 }) {
   return (
-    <div className={cn("marquee-mask pause-on-hover overflow-hidden", className)}>
+    <div
+      className={cn("marquee-mask pause-on-hover overflow-hidden", className)}
+      tabIndex={0}
+      role="group"
+      aria-label="Scrolling content, focus to pause"
+    >
       <div
         className="flex w-max animate-marquee gap-5 pr-5"
         style={

@@ -23,16 +23,27 @@ export function Footer() {
             <div key={col.title}>
               <h3 className="mb-3 text-sm font-medium">{col.title}</h3>
               <ul className="space-y-2.5">
-                {col.links.map((link) => (
-                  <li key={link.href + link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {col.links.map((link) =>
+                  link.href === "#" ? (
+                    <li key={link.href + link.label}>
+                      <span
+                        className="cursor-default text-sm text-muted-foreground/50"
+                        title="Placeholder — point this at your own page before launch"
+                      >
+                        {link.label}
+                      </span>
+                    </li>
+                  ) : (
+                    <li key={link.href + link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ),
+                )}
               </ul>
             </div>
           ))}

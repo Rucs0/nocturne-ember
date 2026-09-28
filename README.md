@@ -20,9 +20,9 @@ cd nocturne-ember && npm install && npm run dev
 - **Next.js 16** (App Router) + **React 19** + **TypeScript**
 - **Tailwind v4** with a CSS-first token system — one file to rebrand
 - **Motion** primitives: scroll reveals, staggered entrances, count-up numbers, a CSS marquee, and a cursor-following spotlight card
-- **next-themes** dark/light with system detection, no flash on load
+- **next-themes** dark/light with a one-click toggle, no flash on load
 - An animated status-board mock built entirely from CSS and data — **no image assets anywhere in this template**
-- Accessible accordion, button, badge, and input built on Radix
+- Accessible accordion and button built on Radix
 
 ## Quick start
 

@@ -34,7 +34,7 @@ export function Hero() {
             transition={{ duration: 0.6, ease: EASE }}
           >
             <span className="glass inline-flex items-center gap-2 rounded-full py-1.5 pr-4 pl-1.5 text-sm text-muted-foreground">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-brand/15 px-2.5 py-0.5 text-xs font-medium text-brand">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-brand px-2.5 py-0.5 text-xs font-medium text-primary-foreground">
                 <Activity className="size-3" />
                 Live
               </span>

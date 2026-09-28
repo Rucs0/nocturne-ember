@@ -50,6 +50,11 @@ const DOT: Record<Status, string> = {
   degraded: "bg-amber-500",
 };
 
+const STATUS_LABEL: Record<Status, string> = {
+  ok: "Operational",
+  degraded: "Degraded",
+};
+
 export function StatusBoard() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
@@ -94,6 +99,7 @@ export function StatusBoard() {
                 }`}
               />
               <span className={`relative inline-flex size-2.5 rounded-full ${DOT[svc.status]}`} />
+              <span className="sr-only">{STATUS_LABEL[svc.status]}</span>
             </span>
 
             <div className="min-w-0 flex-1">

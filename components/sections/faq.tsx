@@ -7,7 +7,7 @@ import {
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
 
-const FAQS = [
+export const FAQS = [
   {
     q: "How fast will I actually hear about an outage?",
     a: "Team plans check every 10 seconds from 14 regions. A hard failure pages you in under 30 seconds; a slow degradation trips once it clears your latency threshold twice in a row, which keeps a single blip from waking anyone.",
